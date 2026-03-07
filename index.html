@@ -3,47 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>道始流 · 统一窗口</title>
+    <title>道始流 · 统一交流窗口</title>
     <style>
         body {
-            font-family: system-ui, sans-serif;
-            background: #f5f7fa;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f9fafc;
+            margin: 0;
             padding: 20px;
             line-height: 1.6;
+            color: #1e293b;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
-            border-radius: 30px;
-            padding: 40px 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            padding: 40px 35px;
         }
         h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 350;
             text-align: center;
-            margin-bottom: 0.2em;
+            margin: 0 0 0.2em;
+            color: #0f172a;
         }
         .sub {
+            font-size: 1.2rem;
             text-align: center;
             color: #475569;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #e2e8f0;
             padding-bottom: 1.5em;
             margin-bottom: 2em;
         }
         .intro {
-            background: #f1f5f9;
-            border-radius: 20px;
-            padding: 25px;
             font-size: 1.1rem;
+            background: #f1f5f9;
+            border-radius: 24px;
+            padding: 28px;
+            margin-bottom: 2.5em;
+        }
+        .intro p {
+            margin: 0.8em 0;
+        }
+        .intro strong {
+            color: #1e293b;
+        }
+        .notice {
+            font-size: 0.9rem;
+            color: #64748b;
+            background: #f8fafc;
+            border-left: 4px solid #94a3b8;
+            padding: 12px 20px;
+            border-radius: 12px;
+            margin: 2em 0 1.5em;
         }
         .footer {
             text-align: center;
+            font-size: 0.9rem;
             color: #94a3b8;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.8em;
             margin-top: 2.5em;
-            border-top: 1px solid #eee;
-            padding-top: 1.5em;
+        }
+        .back-link {
+            text-align: center;
+            margin: 2em 0 1em;
+        }
+        .back-link a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px dotted #94a3b8;
+        }
+        .giscus {
+            margin-top: 2.5em;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 25px 18px; }
+            h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -51,10 +88,41 @@
     <div class="container">
         <h1>道始流</h1>
         <div class="sub">Dao Origin Flow · 统一交流窗口</div>
+
         <div class="intro">
-            <p><strong>欢迎来到道始流。</strong> 这里是“道生态”各行业数字门牌的统一入口，也是我们共同交流、碰撞思想的平台。</p>
-            <p>目前页面正在建设中，很快将开放评论区，欢迎各界朋友留下宝贵意见。</p>
+            <p><strong>道始流</strong> 是“道生态”各行业数字门牌的统一入口，也是我们共同交流、碰撞思想的平台。</p>
+            <p>无论您来自哪个行业，对“道”的哲学、数字门牌、生态建设有何见解或疑问，都欢迎在此留下您的想法。</p>
+            <p>这条道路前所未有，我们愿与各界朋友一同探索、共建。</p>
         </div>
+
+        <div class="notice">
+            💬 留言需使用 GitHub 账号。所有留言仅代表个人观点，与本站立场无关。我们珍视每一条真诚的建议。
+        </div>
+
+        <!-- 将下面这段替换为您在 giscus.app 生成的完整代码 -->
+        <div class="giscus">
+            <script src="https://giscus.app/client.js"
+                    data-repo="daoshiliu/daoshiliu.github.io"
+                    data-repo-id="这里替换为您的仓库ID"
+                    data-category="Announcements"
+                    data-category-id="这里替换为您的分类ID"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="top"
+                    data-theme="light"
+                    data-lang="zh-CN"
+                    data-loading="lazy"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+        </div>
+
+        <div class="back-link">
+            <a href="https://daozhongdao.org" target="_blank">返回道中道根官网</a>
+        </div>
+
         <div class="footer">
             <p>陈有进 · 道始流 · 开放交流 共探新路</p>
         </div>
