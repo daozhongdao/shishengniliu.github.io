@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>道始流 · </title>
+    <title>道始流 · 统一交流窗口</title>
     <style>
         body {
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
@@ -75,7 +75,8 @@
             text-decoration: none;
             border-bottom: 1px dotted #94a3b8;
         }
-        .giscus {
+        /* Twikoo 评论区容器 */
+        #twikoo {
             margin-top: 2.5em;
         }
         @media (max-width: 600px) {
@@ -85,45 +86,36 @@
     </style>
 </head>
 <body>
-    <script>
+    <div class="container">
+        <h1>道始流</h1>
+        <div class="sub">Dao Origin Flow · 统一交流窗口</div>
 
         <div class="intro">
-            <p><strong>道始流</strong> 是是我们共同交流、碰撞思想的地方。</p>
-            <p>无论您来自哪个行业，对“道”的哲学、数字、生态建设有何见解或疑问，都欢迎在此留下您的想法。</p>
+            <p><strong>道始流</strong> 是我们共同交流、碰撞思想的地方。</p>
+            <p>无论您来自哪个行业，对“道”的哲学、数字门牌、生态建设有何见解或疑问，都欢迎在此留下您的想法。</p>
             <p>这条道路前所未有，我们愿与各界朋友一同探索、共建。</p>
         </div>
 
         <div class="notice">
-            💬 留言需使用 GitHub 账号。所有留言仅代表个人观点，与本站立场无关。我们珍视每一条真诚的建议。
-          后续会继续更新可以不需要 GitHub 账号就可以互动的方式，目前暂时只支持这种，请谅解。
+            💬 现在您可以直接留言，无需任何账号。我们珍视每一条真诚的建议。
         </div>
 
-        <!-- 将下面这段替换为您在 giscus.app 生成的完整代码 -->
-        <div class="giscus">
-            <script src="https://giscus.app/client.js"
-                    data-repo="daoshiliu/daoshiliu.github.io"
-                    data-repo-id="这里替换为您的仓库ID"
-                    data-category="Announcements"
-                    data-category-id="这里替换为您的分类ID"
-                    data-mapping="pathname"
-                    data-strict="0"
-                    data-reactions-enabled="1"
-                    data-emit-metadata="0"
-                    data-input-position="top"
-                    data-theme="light"
-                    data-lang="zh-CN"
-                    data-loading="lazy"
-                    crossorigin="anonymous"
-                    async>
-            </script>
-        </div>
+        <!-- Twikoo 评论区 -->
+        <div id="twikoo"></div>
+        <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js"></script>
+        <script>
+            twikoo.init({
+                envId: 'daoshiliu-6ggdemuo0b4ebbe0',  // 您的腾讯云环境ID
+                el: '#twikoo'
+            });
+        </script>
 
         <div class="back-link">
             <a href="https://daozhongdao.org" target="_blank">返回道中道官网</a>
         </div>
 
         <div class="footer">
-            <p> 道始流 · 开放交流 共探新路</p>
+            <p>道始流 · 开放交流 共探新路</p>
         </div>
     </div>
 </body>
