@@ -25,8 +25,21 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        .comment-section {
+        .section-title {
             margin-top: 40px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #0f172a;
+        }
+        .section-desc {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        hr {
+            margin: 50px 0;
+            border: none;
+            border-top: 2px dashed #e2e8f0;
         }
         .footer {
             text-align: center;
@@ -36,11 +49,21 @@
             border-top: 1px solid #e2e8f0;
             padding-top: 20px;
         }
+        /* 返回按钮样式 */
+        .back-btn {
+            background: none;
+            border: none;
+            color: #2563eb;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            display: block;
+        }
     </style>
 </head>
 <body>
     <!-- 返回按钮（仅图标，位于顶部） -->
-    <button onclick="history.back()" style="background: none; border: none; color: #2563eb; cursor: pointer; font-size: 1rem; margin-bottom: 20px;">
+    <button class="back-btn" onclick="history.back()">
         <
     </button>
 
@@ -51,11 +74,10 @@
         <p>所有留言永久留存，成为道生态发展史的一部分。</p>
     </div>
 
-    <!-- 分区说明：Giscus 评论区（需要 GitHub 账号） -->
-    <h3 style="margin-top: 40px;">💬 GitHub 用户讨论区</h3>
-    <p style="color: #64748b; font-size: 0.9rem;">使用 GitHub 账号登录后可参与讨论。</p>
+    <!-- ========== Giscus 评论区（需要 GitHub 账号） ========== -->
+    <div class="section-title">💬 GitHub 用户讨论区</div>
+    <div class="section-desc">使用 GitHub 账号登录后可参与讨论。</div>
     
-    <!-- Giscus 评论区 -->
     <script src="https://giscus.app/client.js"
         data-repo="daozhongdao/daoshiliu-forum"
         data-repo-id="R_kgDORjVGqw"
@@ -74,14 +96,13 @@
     </script>
 
     <!-- 分割线 -->
-    <hr style="margin: 50px 0; border: none; border-top: 2px dashed #e2e8f0;">
+    <hr>
 
-    <!-- 分区说明：Twikoo 评论区（游客直接留言） -->
-    <h3 style="margin-top: 20px;">💬 游客留言区</h3>
-    <p style="color: #64748b; font-size: 0.9rem;">无需账号，直接留言。</p>
+    <!-- ========== Twikoo 评论区（游客直接留言） ========== -->
+    <div class="section-title">💬 游客留言区</div>
+    <div class="section-desc">无需账号，直接留言。</div>
 
-    <!-- Twikoo 评论区（游客用） -->
-    <div id="twikoo" class="comment-section"></div>
+    <div id="twikoo"></div>
     <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js"></script>
     <script>
         twikoo.init({
@@ -91,7 +112,7 @@
     </script>
 
     <div class="footer">
-        <p>陈有进 · 道始流 · 开放交流 共探新路</p>
+        <p>陈有进 · 道始流 · 开放交流 共探新路 · 可联系微信：liuyanyanfu</p>
     </div>
 </body>
 </html>
