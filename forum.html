@@ -40,7 +40,29 @@
     <div class="intro">
         <p>欢迎来这里交流思想、碰撞火花。</p>
         <p>所有留言永久留存，成为道生态发展史的一部分。</p>
-        <p>💬 使用 GitHub 账号登录即可发言。</p>
+<!-- Giscus评论区 -->
+<script src="https://giscus.app/client.js"
+    data-repo="daozhongdao/daoshiliu-forum"
+    data-repo-id="R_kgDORjVGqw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDORjVGq84C4FvI"
+    data-mapping="pathname"
+    ...>
+</script>
+
+<!-- 分割线（可选） -->
+<hr style="margin: 40px 0; border-color: #e2e8f0;">
+
+<!-- Twikoo评论区（游客用） -->
+<div id="twikoo"></div>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js"></script>
+<script>
+  twikoo.init({
+    envId: '你的腾讯云环境ID',  // 你之前申请的那个
+    el: '#twikoo'
+  })
+</script>
+        
     </div>
 
     <<script src="https://giscus.app/client.js"
