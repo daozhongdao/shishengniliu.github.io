@@ -75,9 +75,19 @@
             text-decoration: none;
             border-bottom: 1px dotted #94a3b8;
         }
-        /* Twikoo 评论区容器 */
-        #twikoo {
-            margin-top: 2.5em;
+        .forum-link {
+            display: inline-block;
+            margin-left: 20px;
+            background: #2563eb;
+            color: white !important;
+            padding: 6px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+        .forum-link:hover {
+            background: #1e4b8e;
         }
         @media (max-width: 600px) {
             .container { padding: 25px 18px; }
@@ -97,19 +107,9 @@
         </div>
 
         <div class="notice">
-            💬 现在您可以直接留言，无需任何账号。我们珍视每一条真诚的建议。
-            <a href="/forum.html" style="color: #2563eb; margin-left: 20px;">💬 交流社区</a>
+            💬 欢迎参与讨论！使用 GitHub 账号即可加入我们的交流社区。
+            <a href="https://github.com/daozhongdao/daoshiliu.github.io/discussions" target="_blank" class="forum-link">道始流交流社区 →</a>
         </div>
-<a href="https://github.com/daozhongdao/daoshiliu.github.io/discussions" target="_blank">💬 道始流交流社区</a>
-        <!-- Twikoo 评论区 -->
-        <div id="twikoo"></div>
-        <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js"></script>
-        <script>
-            twikoo.init({
-                envId: 'daoshiliu-6ggdemuo0b4ebbe0',  // 您的腾讯云环境ID
-                el: '#twikoo'
-            });
-        </script>
 
         <div class="back-link">
             <a href="https://daozhongdao.org" target="_blank">返回道中道官网</a>
